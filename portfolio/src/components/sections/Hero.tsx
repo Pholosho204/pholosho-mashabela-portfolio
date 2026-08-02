@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { personalInfo, socialLinks } from "@/lib/data";
+import Image from "next/image";
 
 const iconMap = {
   github: Github,
@@ -122,17 +123,17 @@ export function Hero() {
           className="relative mx-auto flex w-full max-w-sm justify-center lg:max-w-none"
         >
           <div className="relative aspect-square w-full max-w-[320px] overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-muted to-card shadow-xl">
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-6 text-center">
-              <div className="flex h-24 w-24 items-center justify-center rounded-full bg-primary/10 text-3xl font-bold text-primary">
-                PM
-              </div>
-              <p className="text-sm font-medium text-foreground">
-                Professional photo
-              </p>
-              <p className="text-xs text-muted-foreground">
-                Placeholder — replace with your headshot
-              </p>
-            </div>
+            <div className="absolute inset-0 flex items-center justify-center p-6">
+  <div className="relative h-56 w-56 overflow-hidden rounded-full border-4 border-primary shadow-2xl">
+    <Image
+      src="/images/profile.jpeg"
+      alt="Pholosho Bethuel Mashabela"
+      fill
+      className="object-cover"
+      priority
+    />
+  </div>
+</div>
             {/* Decorative corner accent */}
             <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/15 blur-2xl" />
             <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-full bg-primary/10 blur-xl" />
