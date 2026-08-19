@@ -48,7 +48,7 @@ export function Hero() {
             transition={{ duration: 0.55, delay: 0.12 }}
             className="mt-4 text-xl font-medium text-muted-foreground sm:text-2xl"
           >
-            {personalInfo.headline}
+            Computer Science Graduate & Software Developer
           </motion.p>
 
           <motion.p
@@ -57,8 +57,11 @@ export function Hero() {
             transition={{ duration: 0.55, delay: 0.18 }}
             className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg"
           >
-            {personalInfo.tagline} Currently completing Work-Integrated Learning
-            and preparing to graduate in October 2026.
+            I&apos;m a Computer Science graduate passionate about building
+            reliable, user-focused software that solves real-world problems.
+            With hands-on experience across full-stack and mobile development,
+            I enjoy turning ideas into practical products while continuously
+            improving my technical skills.
           </motion.p>
 
           <motion.div
@@ -71,13 +74,14 @@ export function Hero() {
               href="#projects"
               className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:scale-[1.02] hover:shadow-md active:scale-[0.98]"
             >
-              View projects
+              View my work
             </a>
+
             <a
               href="#contact"
               className="inline-flex items-center justify-center rounded-full border border-border bg-card px-6 py-3 text-sm font-medium text-foreground transition-all hover:bg-muted active:scale-[0.98]"
             >
-              Contact me
+              Let&apos;s connect
             </a>
           </motion.div>
 
@@ -91,9 +95,11 @@ export function Hero() {
               <MapPin className="h-4 w-4 text-primary" />
               {personalInfo.location}
             </div>
+
             <div className="flex items-center gap-2">
               {socialLinks.map((link) => {
                 const Icon = iconMap[link.icon as keyof typeof iconMap];
+
                 return (
                   <a
                     key={link.name}
@@ -115,7 +121,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Photo placeholder */}
+        {/* Profile photo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -124,16 +130,17 @@ export function Hero() {
         >
           <div className="relative aspect-square w-full max-w-[320px] overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-muted to-card shadow-xl">
             <div className="absolute inset-0 flex items-center justify-center p-6">
-  <div className="relative h-56 w-56 overflow-hidden rounded-full border-4 border-primary shadow-2xl">
-    <Image
-      src="/images/profile.jpeg"
-      alt="Pholosho Bethuel Mashabela"
-      fill
-      className="object-cover"
-      priority
-    />
-  </div>
-</div>
+              <div className="relative h-56 w-56 overflow-hidden rounded-full border-4 border-primary shadow-2xl">
+                <Image
+                  src="/images/profile.jpeg"
+                  alt="Pholosho Bethuel Mashabela"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+
             {/* Decorative corner accent */}
             <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/15 blur-2xl" />
             <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-full bg-primary/10 blur-xl" />
@@ -150,6 +157,7 @@ export function Hero() {
         aria-label="Scroll to about"
       >
         <span className="text-xs uppercase tracking-wider">Scroll</span>
+
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
@@ -157,7 +165,6 @@ export function Hero() {
           <ArrowDown className="h-4 w-4" />
         </motion.div>
       </motion.a>
-
     </section>
   );
 }
