@@ -21,23 +21,53 @@ export function Contact() {
   );
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("loading");
-    const form = e.currentTarget;
-    const data = new FormData(form);
+  e.preventDefault();
 
-    try {
-      // Client-side simulation — replace with real API when ready
-      await new Promise((r) => setTimeout(r, 900));
-      console.log("Contact form:", Object.fromEntries(data));
-      setStatus("success");
-      form.reset();
-      setTimeout(() => setStatus("idle"), 4000);
-    } catch {
-      setStatus("error");
-      setTimeout(() => setStatus("idle"), 3000);
+  setStatus("loading");
+
+  const form = e.currentTarget;
+
+  const formData = new FormData(form);
+
+  const payload = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    subject: formData.get("subject"),
+    message: formData.get("message"),
+  };
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.error || "Failed to send message");
     }
+
+    setStatus("success");
+
+    form.reset();
+
+    setTimeout(() => {
+      setStatus("idle");
+    }, 4000);
+  } catch (error) {
+    console.error("Contact form error:", error);
+
+    setStatus("error");
+
+    setTimeout(() => {
+      setStatus("idle");
+    }, 4000);
   }
+}
 
   return (
     <section id="contact" className="section-padding bg-muted/30">
