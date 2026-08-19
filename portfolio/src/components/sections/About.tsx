@@ -8,22 +8,22 @@ const strengths = [
   {
     icon: Code2,
     title: "Technical foundation",
-    text: "Solid grounding in full-stack development across Java, PHP, Python, JavaScript, and React Native, with hands-on AWS experience.",
+    text: "Strong grounding in full-stack development across Java, PHP, Python, JavaScript, and React Native, with hands-on experience building practical software solutions.",
   },
   {
     icon: Users,
     title: "Collaborative mindset",
-    text: "Proven ability to contribute in team projects — from hackathons to internships — delivering clean, reusable code and meeting deadlines.",
+    text: "Experienced in contributing to team projects and internships, writing clean, reusable code, communicating clearly, and delivering work within deadlines.",
   },
   {
     icon: Lightbulb,
     title: "Problem-solving focus",
-    text: "I enjoy turning real operational needs into practical software, whether tracking tenders or supporting sustainable behaviour with AI features.",
+    text: "I enjoy turning real-world challenges into practical software, from tender management systems to platforms that support businesses and communities.",
   },
   {
     icon: Target,
     title: "Growth-oriented",
-    text: "Actively completing Work-Integrated Learning and seeking graduate and junior roles where I can keep learning while contributing from day one.",
+    text: "As a Computer Science graduate, I am eager to apply my skills in a professional environment while continuing to learn, grow, and contribute to meaningful projects.",
   },
 ];
 
@@ -34,7 +34,7 @@ export function About() {
         <SectionHeading
           eyebrow="About"
           title="Building software that solves real problems"
-          description="A motivated Computer Science graduate with completed coursework, practical internship experience, and a genuine interest in full-stack and mobile development."
+          description="A Computer Science graduate with practical software development experience and a strong interest in full-stack, backend, and mobile development."
         />
 
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
@@ -50,24 +50,26 @@ export function About() {
               <span className="font-medium text-foreground">
                 Pholosho Bethuel Mashabela
               </span>
-              , a final-year Computer Science diploma student at Tshwane
-              University of Technology. All academic coursework is complete, and
-              I am currently finishing Work-Integrated Learning at Ground Up
-              Grinders with graduation expected in October 2026.
+              , a Computer Science graduate from Tshwane University of
+              Technology with a strong passion for software development and
+              problem-solving.
             </p>
+
             <p>
-              What I enjoy most is taking a concrete problem — managing tenders,
-              supporting gym operations, or helping communities track emissions —
-              and turning it into usable software. I work comfortably across the
-              stack: backend services, databases, responsive frontends, and
+              I enjoy taking real-world problems — whether managing tenders,
+              supporting business operations, or building platforms that make
+              everyday processes easier — and turning them into practical,
+              reliable software. I work comfortably across the stack, including
+              backend services, databases, responsive web applications, and
               mobile apps with React Native.
             </p>
+
             <p>
-              My goal is to join a team as a graduate or junior software
-              developer where I can contribute immediately, learn from
-              experienced engineers, and grow into a well-rounded professional. I
-              value clean code, clear communication, and delivering work that
-              others can rely on.
+              I am currently seeking graduate and junior software development
+              opportunities where I can contribute my existing skills, learn
+              from experienced engineers, and continue growing as a software
+              developer. I value clean code, clear communication, teamwork, and
+              building software that people can genuinely rely on.
             </p>
           </motion.div>
 
@@ -84,9 +86,11 @@ export function About() {
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <item.icon className="h-5 w-5" />
                 </div>
+
                 <h3 className="mb-1.5 text-sm font-semibold text-foreground">
                   {item.title}
                 </h3>
+
                 <p className="text-sm leading-relaxed text-muted-foreground">
                   {item.text}
                 </p>
