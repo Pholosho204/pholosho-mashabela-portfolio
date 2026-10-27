@@ -132,7 +132,7 @@ export function Hero() {
             <div className="absolute inset-0 flex items-center justify-center p-6">
               <div className="relative h-56 w-56 overflow-hidden rounded-full border-4 border-primary shadow-2xl">
                 <Image
-                  src="/images/profile.jpeg"
+                  src="/images/profile-photo.jpeg"
                   alt="Pholosho Bethuel Mashabela"
                   fill
                   className="object-cover"

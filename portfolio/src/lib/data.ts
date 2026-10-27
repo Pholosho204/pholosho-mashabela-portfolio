@@ -122,9 +122,9 @@ export const projects: Project[] = [
     id: "tender-tracker",
     title: "Tender Tracker",
     subtitle: "Full-Stack Web Application",
-    status: "in-progress",
+    status: "completed",
     overview:
-      "Independently developing a tender management system for Ithemba General Trading to streamline the tracking and management of business tenders.",
+      "Independently developed a tender management system for Ithemba General Trading to streamline the tracking and management of business tenders.",
     problem:
       "Manual tracking of tender submissions, deadlines, and status updates created inefficiencies and risk of missed opportunities for the business.",
     features: [
@@ -136,8 +136,9 @@ export const projects: Project[] = [
     lessons:
       "Building a production system independently for a real business reinforced the importance of clear requirements, maintainable architecture, and iterative delivery.",
     challenges:
-      "Balancing feature completeness with a clean handover while the repository remains private pending completion.",
+      "Balancing feature completeness with a clean handover to ensure a smooth transition into production.",
     githubUrl: "https://github.com/Pholosho204",
+    liveUrl: "https://tendergo.live/",
   },
   {
     id: "gym-management",
@@ -221,10 +222,10 @@ export const experiences: Experience[] = [
     id: "ground-up-grinders",
     company: "Ground Up Grinders",
     role: "Work-Integrated Learning Intern (WIL)",
-    period: "Apr 2026 – Present",
+    period: "April 2026 – September 2026",
     description: [
-      "Currently completing Work-Integrated Learning placement as part of final-year graduation requirements at Tshwane University of Technology.",
-      "Applying full-stack and software engineering skills in a real-world environment while preparing for graduation in October 2026.",
+      "Completed Work-Integrated Learning placement as part of final-year graduation requirements at Tshwane University of Technology.",
+      "Applied full-stack and software engineering skills in a real-world environment while preparing for graduation in October 2026.",
     ],
   },
   {
